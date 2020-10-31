@@ -1,0 +1,80 @@
+#bg-custom {
+    background-color: #f0f0f0;
+    overflow-x: hidden;
+}
+
+.heading-font {
+    font-family: "Montserrat", sans-serif;
+}
+
+#cust-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+p.display-4 {
+    font-size: 1.5em;
+}
+
+.cst-label {
+    font-size: 1em !important;
+}
+
+.cst-question {
+    font-size: 1.5em;
+}
+
+
+/*Extra small devices (portrait phones, less than 576px)*/
+/*No media query for `xs` since this is the default in Bootstrap*/
+
+@media (max-width: 576px) {
+    p.display-4 {
+        font-size: 1.1em;
+    }
+}
+
+/*Small (-sm-) devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+    .heading-fluid {
+        font-size: 2.5em;
+    }
+
+    p.display-4 {
+        font-size: 1.1em;
+    }
+}
+
+/*Medium (-md-) devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+    .heading-fluid {
+        font-size: 3em;
+    }
+
+    p.display-4 {
+        font-size: 1.3em;
+    }
+}
+
+/*Large (-lg-) devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+    .heading-fluid {
+        font-size: 3.5em;
+    }
+
+    p.display-4 {
+        font-size: 1.5em;
+    }
+}
+
+/*Extra large (-xl-) devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+    .heading-fluid {
+        font-size: 4em;
+    }
+
+    p.display-4 {
+        font-size: 1.7em;
+    }
+}
