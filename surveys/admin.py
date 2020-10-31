@@ -4,8 +4,11 @@ from nested_inline.admin import NestedStackedInline, NestedModelAdmin
 from django.shortcuts import reverse
 from django.utils.html import format_html
 
-
 # Register your models here.
+admin.site.site_header = "Pure Survey Admin"
+admin.site.index_title = "Welcome!"
+admin.site.site_title = "PS Admin"
+
 
 class AnswerInline(NestedStackedInline):
     model = Answer
@@ -25,7 +28,7 @@ class SurveyAdmin(NestedModelAdmin):
     model = Survey
     inlines = [QuestionInline]
     search_fields = ['topic', 'description']
-    current_url = ""
+    exclude = ('created_by',)
 
     def view_results(self, obj):
         return format_html(
@@ -38,8 +41,6 @@ class SurveyAdmin(NestedModelAdmin):
         obj.save()
 
     def get_queryset(self, request):
-        self.current_url = request.get_full_path()
-        print(self.current_url)
         qs = super(SurveyAdmin, self).get_queryset(request)
         if request.user.is_superuser:
             return qs
