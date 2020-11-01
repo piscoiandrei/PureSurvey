@@ -25,7 +25,7 @@ SECRET_KEY = 'z=g6o@4-cb(_!#e^kk+&h^t&b%zyx39)ppjl5lk!9ah2a(9z4j'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['pure-survey.herokuapp.com']
 
 # Application definition
 
